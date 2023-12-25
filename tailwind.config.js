@@ -30,7 +30,7 @@ export default {
       pink:"#FF1493",
     },
     backgroundImage: {
-      'about': "url('/public/img2.svg')",
+      'about': "url('/public/img2.png')",
     }
   },
   plugins: [],
