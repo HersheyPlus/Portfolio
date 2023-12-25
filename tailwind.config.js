@@ -2,13 +2,14 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+    },
     fontFamily: {
       openSans: ["Open Sans", "sans-serif"],
       roboto: ["Roboto", "sans-serif"],
     },
     screens: {
-      tablet: "640px",
+      tablet: "768px",
       laptop: "1024px",
       desktop: "1440px",
       "full-desktop": "1600px",
@@ -25,7 +26,12 @@ export default {
       white: "#FFFFFF",
       blue:"#1E90FF",
       red:"#FF0000",
+      yellow:"#FFFF00",
+      pink:"#FF1493",
     },
+    backgroundImage: {
+      'about': "url('/public/img2.svg')",
+    }
   },
   plugins: [],
 };

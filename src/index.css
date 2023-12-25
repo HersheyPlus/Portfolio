@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply text-white p-0 m-0 box-border bg-dark font-openSans leading-4;
+    @apply text-white p-0 m-0 box-border bg-dark font-openSans leading-4  min-w-[500px] ;
   }
   h1 {
     @apply text-5xl font-bold;
@@ -18,7 +18,7 @@
   h4 {
     @apply text-2xl font-semibold;
   }
-  p, span {
+  p {
     @apply text-xs tablet:text-base desktop:text-lg font-medium ;
   }
   img {
@@ -29,6 +29,7 @@
   }
 
   .section {
-    @apply w-5/6 mx-auto border-2 border-red h-screen max-w-screen-desktop mb-40 py-8 box-border;
+    @apply w-5/6 mx-auto border-2 border-red h-screen max-w-screen-desktop mb-40 box-border;
   }
+
 }
