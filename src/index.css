@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply text-white p-0 m-0 box-border bg-dark font-openSans leading-4  min-w-[500px] tablet:min-w-[1280px];
+    @apply text-white p-0 m-0 box-border bg-dark font-openSans leading-4  min-w-[450px] tablet:min-w-[1024px] bg-body bg-no-repeat bg-cover ;
   }
   h1,h2,h3,h4,h5,h6 {
     @apply font-bold;
@@ -12,12 +12,9 @@
   img {
     @apply object-cover w-full;
   }
-  .captionText {
-    @apply font-normal text-[12px];
-  }
 
   .section {
-    @apply w-5/6 mx-auto h-full max-w-screen-desktop mb-40 box-border;
+    @apply w-5/6 mx-auto h-full max-w-screen-desktop mb-44 box-border;
   }
 
 }

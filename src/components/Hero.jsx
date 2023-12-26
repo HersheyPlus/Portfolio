@@ -1,4 +1,4 @@
-
+import { FaGithub,FaDiscord } from "react-icons/fa";
 function Hero() {
   return (
     <section className="section" id="hero">
@@ -10,8 +10,12 @@ function Hero() {
           </div>
           <div className="flex items-center tablet:items-end flex-col tablet:text-right font-roboto gap-y-2">
               <h5 className="uppercase">hello, my name&apos;s Suphawat Singka</h5>
-              <p className="w-5/6 text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit doloribus, nostrum est animi numquam ipsam fugit totam adipisci illo rem recusandae dolor inventore corrupti asperiores cum, molestiae, eligendi explicabo culpa iste. Perspiciatis culpa sequi asperiores. Dignissimos itaque incidunt, numquam tempora suscipit ullam harum fugiat repellendus! Debitis culpa quod sequi in?</p>
+              <p className="w-5/6 text-justify text-sm font-bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit doloribus, nostrum est animi numquam ipsam fugit totam adipisci illo rem recusandae dolor inventore corrupti asperiores cum, molestiae, eligendi explicabo culpa iste. Perspiciatis culpa sequi asperiores. Dignissimos itaque incidunt, numquam tempora suscipit ullam harum fugiat repellendus! Debitis culpa quod sequi in?</p>
+            <div className="flex gap-x-4">
               <button className="bg-blue rounded-full py-2 px-8 mt-4">Contact me</button>
+              <a  href="https://github.com/HersheyPlus" className="bg-blue rounded-full py-2 px-4 mt-4"><FaGithub /></a>
+              <a href="" className="bg-blue rounded-full py-2 px-4 mt-4"><FaDiscord /></a>
+            </div>
           </div>
         </div>
         <div className="w-full tablet:w-1/2 flex items-center tablet:h-full">

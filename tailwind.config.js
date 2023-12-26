@@ -31,6 +31,8 @@ export default {
     },
     backgroundImage: {
       'about': "url('/public/img2.png')",
+      'footer': "url('/public/bg-footer.png')",
+      'body': "url('/public/bg-body.png')",
     }
   },
   plugins: [],
