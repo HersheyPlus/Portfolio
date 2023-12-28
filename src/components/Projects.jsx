@@ -9,8 +9,8 @@ function Projects() {
       {isMobileScreen ? (
         <></>
       ) : (
-        <div className="py-3 border-2 border-green-3 bg-dark bg-opacity-50 mb-4 rounded-2xl flex gap-x-4 items-center justify-center">
-          <h2 className="text-3xl">My Projects</h2>
+        <div className="py-3 border-2 border-green-2 bg-dark bg-opacity-50 mb-4 rounded-2xl flex gap-x-4 items-center justify-center">
+          <h2 className="text-3xl">Projects</h2>
           <div className="text-4xl"><IoCodeWorkingSharp /></div>
           </div>
       )}
@@ -20,8 +20,8 @@ function Projects() {
         <ProjectList  img="/img3.png" alt="project 3" projectName="Networking" using="Docker"/>
         <ProjectList  img="/img2.png" alt="project 4" projectName="Shark Ulta" using="Kubenetes"/>
       </div>
-      <h2 className="uppercase text-right mt-4 underline underline-offset-4">
-        view all project ➡
+      <h2 className="uppercase text-right mt-4 underline underline-offset-4 hover:text-gray">
+        <a target="blank" href="#">view all project &#x21aa;</a>
       </h2>
     </section>
   );

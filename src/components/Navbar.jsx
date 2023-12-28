@@ -2,7 +2,8 @@ import { useState } from "react";
 import { IoMenu } from "react-icons/io5";
 import useMediaQuery from "../utility/useMediaQuery";
 import { RxCross2 } from "react-icons/rx";
-import { AiFillRightSquare } from "react-icons/ai";
+import { TbBrandReact } from "react-icons/tb";
+import {Link} from 'react-scroll'
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,10 +25,10 @@ function Navbar() {
           </button>
         ) : (
           <ul className="list-none flex items-center gap-x-8 text-xl">
-            <li>About</li>
-            <li>Skills</li>
-            <li>Projects</li>
-            <li><AiFillRightSquare /></li>
+            <li className="border-t-2 border-l-2 border-green-1 py-1 px-3 rounded-xl menu-hover cursor-pointer hover:border-0"><Link >About</Link></li>
+            <li className="border-t-2 border-l-2 border-green-1 py-1 px-3 rounded-xl menu-hover cursor-pointer hover:border-0"><Link >Skills</Link></li>
+            <li className="border-t-2 border-l-2 border-green-1 py-1 px-3 rounded-xl menu-hover cursor-pointer hover:border-0"><Link className="cursor-pointer">Projects</Link></li>
+            <li className="animate-spin text-2xl hover:text-dark-gray ho"><Link><TbBrandReact /></Link></li>
           </ul>
         )}
       </div>

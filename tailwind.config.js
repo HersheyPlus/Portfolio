@@ -3,10 +3,15 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      dropShadow: {
+        'green-xl': '0 0 1.5em rgba(0, 191, 166, 0.35)',
+        'green-2xl': '0 0 2em rgba(0, 191, 166, 0.35)',
+      }
     },
     fontFamily: {
       openSans: ["Open Sans", "sans-serif"],
       roboto: ["Roboto", "sans-serif"],
+      sofia : ['Sofia Sans Semi Condensed', 'sans-serif']
     },
     screens: {
       tablet: "768px",
@@ -18,11 +23,10 @@ export default {
       "green-1": "#00BFA6",
       "green-2": "#00A18C",
       "green-3": "#00816D",
-      "green-4": "#00634B",
       "dark-gray": "#A9A9A9",
       dark: "#1A1A1A",
       metal: "#E5E5E5",
-      gray: "##D3D3D3",
+      gray: "#D3D3D3",
       white: "#FFFFFF",
       blue:"#1E90FF",
       red:"#FF0000",
@@ -35,5 +39,5 @@ export default {
       'body': "url('/public/bg-body.png')",
     }
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 };

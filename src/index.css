@@ -18,3 +18,16 @@
   }
 
 }
+
+@layer utilities {
+  .menu-hover {
+    @apply relative 
+    hover:text-green-2
+  }
+  .menu-hover::after{
+    @apply content-[''] bg-green-1 h-[3px] w-[0%] left-0 -bottom-[5px] rounded-xl absolute duration-300
+  }
+  .menu-hover:hover::after {
+    @apply w-[100%]
+  }
+}

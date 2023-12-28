@@ -8,37 +8,40 @@ function Contact() {
   const isMobileScreen = useMediaQuery("(min-width: 768px)");
   return (
     <section className='section' id ='contact'>
-        <div className="w-full h-full flex flex-col-reverse tablet:flex-row gap-8 tablet:justify-between">
-        <div className=" h-full w-full tablet:w-1/2 flex flex-col gap-y-6">
+        <div className="w-full h-full flex flex-col-reverse tablet:flex-row gap-8 tablet:justify-between  ">
+        <div className=" h-full w-full tablet:w-1/2 flex flex-col gap-y-6 border-t-2 border-l-2 border-green-1 rounded-xl p-4">
           <div className='space-y-3' id='text'>
           <h1 className="text-4xl tracking-wide text-center tablet:text-left uppercase">Contact me</h1>
           <p className='text-sm w-4/5 mx-auto text-center tablet:w-full tablet:mx-0 tablet:text-left'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque placeat dignissimos illum ipsam in odio necessitatibus ducimus. Sequi, saepe ea.</p>
           </div>
           {isMobileScreen ? (
-            <div className='flex flex-col gap-y-4 text-white text-3xl'>
-            <div className='flex items-center gap-x-4' id='contact-instgram'>
-              <a href="https://www.instagram.com/melbromss_/"><FaInstagram /></a>
+            <div className='flex flex-col items-start gap-y-4 text-white text-3xl'>
+            <a className='flex items-center gap-x-4 hover:text-[#E4405F] cursor-pointer' id='contact-instgram' target="blank" href="https://www.instagram.com/melbromss_/">
+              <FaInstagram />
               <h4 className="text-base">Instagram</h4>
-            </div>
-            <div className='flex items-center gap-x-4' id='contact-facebook'>
-              <a href="https://www.facebook.com/profile.php?id=100094458512009"><FaFacebook /></a>
+            </a>
+
+            <a className='flex items-center gap-x-4 hover:text-[#1877F2]' id='contact-facebook' target="blank" href="https://www.facebook.com/profile.php?id=100094458512009" >
+              <FaFacebook />
               <h4 className="text-base">Facebook</h4>
-            </div>
-            <div className='flex items-center gap-x-4' id='contact-linkedin'>
-              <a href="https://www.linkedin.com/in/suphawat-singka-5602b7270/"><FaLinkedin /></a>
+            </a>
+
+            <a className='flex items-center gap-x-4 hover:text-[#00A0DC]' id='contact-linkedin' target="blank" href="https://www.linkedin.com/in/suphawat-singka-5602b7270/" >
+              <FaLinkedin />
               <h4 className="text-base">Linkedin</h4>
-            </div>
-            <div className='flex items-center gap-x-4' id='contact-twitter'>
-              <a href="https://twitter.com/MelbromssC"><FaXTwitter /></a>
+            </a>
+
+            <a className='flex items-center gap-x-4 hover:text-[#1DA1F2]' id='contact-twitter' target="blank" href="https://twitter.com/MelbromssC">
+              <FaXTwitter />
               <h4 className="text-base">Twitter ( X )</h4>
-            </div>
+            </a>
           </div>
           ) : (
             <div className="flex mx-auto gap-x-6 text-3xl items-center">
-               <a href="https://www.instagram.com/melbromss_/"><FaInstagram /></a>
-               <a href="https://www.facebook.com/profile.php?id=100094458512009"><FaFacebook /></a>
-               <a href="https://www.linkedin.com/in/suphawat-singka-5602b7270/"><FaLinkedin /></a>
-               <a href="https://twitter.com/MelbromssC"><FaXTwitter /></a>
+               <a className="text-[#E4405F]" target="blank" href="https://www.instagram.com/melbromss_/"><FaInstagram /></a>
+               <a className="text-[#1877F2]" target="blank" href="https://www.facebook.com/profile.php?id=100094458512009"><FaFacebook /></a>
+               <a className="text-[#00A0DC]" target="blank" href="https://www.linkedin.com/in/suphawat-singka-5602b7270/"><FaLinkedin /></a>
+               <a className="text-[#1DA1F2]" target="blank" href="https://twitter.com/MelbromssC"><FaXTwitter /></a>
             </div>
           )}
         </div>
