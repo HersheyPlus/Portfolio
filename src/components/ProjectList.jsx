@@ -1,10 +1,15 @@
 import useMediaaQuery from "../utility/useMediaQuery";
+import {motion} from 'framer-motion'
 
 function ProjectList(props) {
     const isMobileScreen = useMediaaQuery("(min-width: 768px)");
-    const { img, alt, projectName, using} = props;
+    const { img, alt, projectName, using, delay} = props;
   return (
-    <div className="border-4 border-green-2 rounded-xl overflow-hidden group relative">
+    <motion.div 
+    initial={{opacity:0,scale:0}}
+    whileInView={{opacity:1, scale:1}}
+    transition={{duration:2, delay:delay}}
+    className="border-4 border-green-2 rounded-xl overflow-hidden group relative">
           {isMobileScreen ? (
             <>
               <img
@@ -35,7 +40,7 @@ function ProjectList(props) {
           </div>
             </>
           )}
-        </div>
+        </motion.div>
   )
 }
 

@@ -3,18 +3,27 @@ import DonutChart from "./DonutChart";
 import { skills } from "../utility/skills";
 import { motion } from "framer-motion";
 import { FaStar } from "react-icons/fa";
+import { animateTopScroll } from "react-scroll/modules/mixins/animate-scroll";
 
 function Skills() {
   return (
     <section className="section" id="skills">
       <div className="grid grid-cols-1 tablet:grid-cols-2 gap-4">
-        <div id="chart">
+        <motion.div 
+        initial={{opacity:0, x:-200}}
+        whileInView={{opacity:1, x:0}}
+        transition={{duration:1, delay:0.5}}
+        id="chart">
           <DonutChart />
-        </div>
+        </motion.div>
         <div className="grid grid-cols-4 tablet:grid-cols-5 px-2 py-4 mb-4 border-t-2 border-r-2 border-green-1 rounded-2xl gap-y-3 tablet:gap-y-4">
             {skills.map((skill, index) => (
-                <motion.a whileHover={{scale:1.1}
-                } key={index} href={skill.link} className="flex flex-col items-center gap-y-1" target="blank">
+                <motion.a 
+                whileHover={{scale:1.1}} 
+                initial={{opacity:0, x:200}}
+                whileInView={{opacity:1, x:0}}
+                transition={{duration:1, delay:0.5}}
+                key={index} href={skill.link} className="flex flex-col items-center gap-y-1" target="blank">
                   <img
                     src={skill.src}
                     alt={skill.alt}
@@ -24,7 +33,11 @@ function Skills() {
                 </motion.a>
             ))}
         </div>
-        <div className=" border-y-2 border-green-1 rounded-lg grid grid-cols-3 gap-3 py-4 px-2 text-white">
+        <motion.div 
+        initial={{opacity:0, scale:0}}
+        whileInView={{opacity:1, scale:1}}
+        transition={{duration:2}}
+        className=" border-y-2 border-green-1 rounded-lg grid grid-cols-3 gap-3 py-4 px-2 text-white">
           <div className="mx-auto text-4xl flex flex-col gap-y-1">
             <h2 className="text-sm text-gray desktop:text-base">
               Total Salary
@@ -62,11 +75,11 @@ function Skills() {
               Garuntee Salary for our developer team
             </p>
           </div>
-        </div>
-        <div className="px-2">
+        </motion.div>
+        <motion.div initial={{opacity:0.2,y:200}} whileInView={{opacity:1, y:0}} transition ={{duration:1}} className="px-2">
           <h1 className="text-3xl mb-2 text-center tablet:text-left">My Skills</h1>
           <p className="text-xs text-center tablet:text-left">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis magnam eaque id veniam nobis earum blanditiis dolorum? Debitis repellat, magni illum officia laboriosam, provident quo magnam ex corporis accusamus deserunt?</p>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
