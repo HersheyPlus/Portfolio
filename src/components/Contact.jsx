@@ -3,6 +3,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import useMediaQuery from "../utility/useMediaQuery";
+import contactImg from '/img1.svg'
 
 function Contact() {
   const isMobileScreen = useMediaQuery("(min-width: 768px)");
@@ -46,7 +47,7 @@ function Contact() {
           )}
         </div>
         <div className="w-full tablet:w-1/2 flex items-center tablet:h-full">
-          <img src="/img1.svg" alt="avatar" className="border-2 h-auto" />
+          <img src={contactImg} alt="avatar" className="border-2 h-auto" />
         </div>
       </div>
   </section>

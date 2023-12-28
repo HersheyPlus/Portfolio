@@ -34,9 +34,9 @@ export default {
       pink:"#FF1493",
     },
     backgroundImage: {
-      'about': "url('/public/img2.png')",
-      'footer': "url('/public/bg-footer.png')",
-      'body': "url('/public/bg-body.png')",
+      'about': "url('/img2.png')",
+      'footer': "url('/bg-footer.png')",
+      'body': "url('/bg-body.png')",
     }
   },
   plugins: [],

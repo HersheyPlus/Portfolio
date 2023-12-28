@@ -1,4 +1,6 @@
 import { FaGithub } from "react-icons/fa";
+import avatar from '/img1.svg'
+
 function Hero() {
   return (
     <section className="section" id="hero">
@@ -20,7 +22,7 @@ function Hero() {
           </div>
         </div>
         <div className="w-full tablet:w-1/2 flex items-center tablet:h-full">
-          <img src="/img1.svg" alt="avatar" className="border-2 h-auto" />
+          <img src={avatar} alt="avatar" className="border-2 h-auto" />
         </div>
       </div>
     </section>
