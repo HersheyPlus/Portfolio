@@ -9,9 +9,9 @@ function Footer() {
       <div className="flex flex-col gap-y-4 tablet:flex-row justify-around mb-4 tablet:mb-0">
         <h4>FAQs</h4>
         <div className=" flex flex-col gap-y-4">
-          <h4>My mission</h4>
-          <h4>Your impacts</h4>
-          <h4>Passion and Insparation</h4>
+          <a href="#" className="hover:text-gray hover:underline hover:underline-offset-2">My mission</a>
+          <a href="#" className="hover:text-gray hover:underline hover:underline-offset-2">Your impacts</a>
+          <a href="#" className="hover:text-gray hover:underline hover:underline-offset-2">Passion and Insparation</a>
         </div>
       </div>
       <div className='flex  flex-col tablet:flex-row gap-x-10 gap-y-5' id='message-to-me'>
