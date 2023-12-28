@@ -39,5 +39,5 @@ export default {
       'body': "url('/public/bg-body.png')",
     }
   },
-  plugins: [require("daisyui")],
+  plugins: [],
 };
