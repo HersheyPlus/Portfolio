@@ -12,12 +12,18 @@ function Projects() {
       {isMobileScreen ? (
         <></>
       ) : (
-        <div className="py-3 border-2 border-green-2 bg-dark bg-opacity-50 mb-4 rounded-2xl flex gap-x-4 items-center justify-center">
-          <h2 className="text-3xl">Projects</h2>
+        <motion.div 
+        initial   ={{opacity:0, scale:0.5}}
+          whileInView={{opacity:1, scale:1}}
+          transition={{duration:1}}
+        className="py-3 border-2 border-green-2 bg-dark bg-opacity-50 mb-4 rounded-2xl flex gap-x-4 items-center justify-center">
+          <h2 
+          
+          className="text-3xl">Projects</h2>
           <div className="text-4xl">
             <IoCodeWorkingSharp />
           </div>
-        </div>
+        </motion.div>
       )}
       <div className="grid grid-cols-1 tablet:grid-cols-2 gap-x-3 gap-y-4 h-full tablet:h-[28rem]">
         {isMobileScreen ? (

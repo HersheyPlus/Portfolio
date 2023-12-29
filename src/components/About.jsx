@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 function About() {
   return (
-    <section className="section">
+    <section className="section h-[80vh]" id='about'>
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}

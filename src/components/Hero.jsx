@@ -1,10 +1,20 @@
 import { FaGithub } from "react-icons/fa";
 import avatar from "/img1.svg";
 import { motion } from "framer-motion";
+import { scroller } from "react-scroll";
+import useMediaQuery from "../utility/useMediaQuery";
 
 function Hero() {
+  const isMobileScreen = useMediaQuery("(min-width: 768px)");
+  const scrollToContact = () => {
+    scroller.scrollTo("contact", {
+      duration: 1200,
+      smooth: true,
+      offset: -150,
+    });
+  };
   return (
-    <section className="section" id="hero">
+    <section className="section mt-0 tablet:mt-32" id="hero">
       <div className="w-full h-full flex flex-col-reverse tablet:flex-row gap-8 tablet:justify-between">
         <div className=" h-full w-full tablet:w-1/2 flex flex-col gap-y-4 tablet:gap-y-8">
           <div
@@ -61,10 +71,25 @@ function Hero() {
               culpa quod sequi in?
             </motion.p>
             <div className="flex gap-x-4 mt-4">
-              <motion.button className="text-base full-desktop:text-lg text-white bg-green-1 hover:before:bg-dark border-green-1 relative rounded-xl overflow-hidden border-2 px-6 py-2 shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-red-500 before:transition-all before:duration-500 hover:text-green-1  hover:before:left-0 hover:before:w-full">
-                <span className="relative z-10">Contact me</span>
-              </motion.button>
-              <motion.button className="text-white bg-green-1 hover:before:bg-dark border-green-1 relative rounded-xl overflow-hidden border-2 px-6 py-2 shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-red-500 before:transition-all before:duration-500 hover:text-green-1  hover:before:left-0 hover:before:w-full">
+              {isMobileScreen ? (<motion.button
+                initial={{ opacity: 0, x: 40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 2 }}
+                className="text-base full-desktop:text-lg text-white bg-green-1 hover:before:bg-dark border-green-1 relative rounded-xl overflow-hidden border-2 px-6 py-2 shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-red-500 before:transition-all before:duration-500 hover:text-green-1  hover:before:left-0 hover:before:w-full"
+              >
+                <span
+                  className="relative z-10 cursor-pointer"
+                  onClick={scrollToContact}
+                >
+                  Contact me
+                </span>
+              </motion.button>) : (<></>)}
+              <motion.button
+                initial={{ opacity: 0, x: -40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 2 }}
+                className="text-white bg-green-1 hover:before:bg-dark border-green-1 relative rounded-xl overflow-hidden border-2 px-6 py-2 shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-red-500 before:transition-all before:duration-500 hover:text-green-1  hover:before:left-0 hover:before:w-full"
+              >
                 <a
                   target="blank"
                   href="https://github.com/HersheyPlus"
@@ -78,9 +103,9 @@ function Hero() {
         </div>
         <div className="w-full tablet:w-1/2 flex items-center tablet:h-full">
           <motion.img
-            initial={{opacity:0, x: 300 }}
-            whileInView={{opacity:1, x: 0 }}
-            transition={{ duration:2 }}
+            initial={{ opacity: 0, x: 300 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 2 }}
             src={avatar}
             alt="avatar"
             className="border-2 h-auto"

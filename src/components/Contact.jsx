@@ -30,9 +30,9 @@ function Contact() {
           </motion.div>
           {isMobileScreen ? (
             <motion.div
-              initial={{ opacity: 0, x: -500 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, delay: 0.8 }}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay:1 }}
               className="flex flex-col items-start gap-y-4 text-white text-3xl"
             >
               <a
@@ -77,9 +77,9 @@ function Contact() {
             </motion.div>
           ) : (
             <motion.div
-              initial={{ opacity: 0, x: 500 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1 }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay:1 }}
               className="flex mx-auto gap-x-6 text-3xl items-center"
             >
               <a
@@ -114,7 +114,7 @@ function Contact() {
           )}
         </div>
         <motion.div
-          initial={{ opacity: 0, x: 400 }}
+          initial={{ opacity: 0, x: 200 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 2}}
           className="w-full tablet:w-1/2 flex items-center tablet:h-full"
